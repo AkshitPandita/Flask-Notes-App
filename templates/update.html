@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+{% block body %}
+<div class="container">
+    <h1>Update the note</h1>
+      <form action="/update/{{note.sno}}" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Note Title</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" value="{{note.title}}" name="title" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Notes</label>
+          <input type="text" class="form-control" name="note" value="{{note.note}}" id="exampleInputPassword1">
+        </div>
+        
+        <button type="submit" class="btn btn-outline-info btn-sm">Update</button>
+      </form>
+    
+{% endblock body %}
